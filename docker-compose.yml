@@ -1,0 +1,22 @@
+services:
+  pytorch:
+    build:
+      context: .
+      args:
+        - USER_NAME=${USER_NAME}
+        - USER_UID=${USER_UID}
+        - USER_GID=${USER_GID}
+      dockerfile: Dockerfile
+    working_dir: '/workspace'
+    tty: true
+    volumes:
+      - ./:/workspace:cashed
+    ports:
+      - "127.0.0.1:8080:8888"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+    shm_size: "2gb"
