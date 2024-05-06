@@ -1,4 +1,12 @@
+# Byte-compiled / optimized / DLL files
 .env
 __pycache__/
 /checkpoints/
 /data/
+.ipynb_checkpoints/
+.code-workspace
+
+# weight file
+*.pt
+*.pth
+*.h5
