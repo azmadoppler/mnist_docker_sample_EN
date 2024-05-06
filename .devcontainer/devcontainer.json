@@ -12,23 +12,23 @@
 	"service": "pytorch",
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"workspaceFolder": "/workspace",
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [8080],
+	"forwardPorts": [
+		8080
+	],
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"python.linting.enabled": true,
-				"python.linting.pylintEnabled": false,
-				"python.linting.flake8Path": "/usr/local/bin/flake8",
-				"python.linting.flake8Enabled": true,
-				"python.linting.flake8Args": [
+				"flake8.enabled": true,
+				"flake8.path": "/usr/local/bin/flake8",
+				"flake8.args": [
 					"--max-line-length=120"
 				],
-				"python.linting.lintOnSave": true,
-				"python.linting.mypyPath": "/usr/local/bin/mypy",
-				"python.linting.mypyEnabled": true,
+				"mypy.enabled": true,
+				"mypy.path": "/usr/local/bin/mypy",
+				"mypy.runOnSave": true,
 				"python.formatting.provider": "black",
 				"python.formatting.blackPath": "/usr/local/bin/black",
 				"python.formatting.blackArgs": [

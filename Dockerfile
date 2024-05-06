@@ -12,7 +12,7 @@ ARG USER_UID=${USER_UID}
 ARG USER_GID=${USER_GID}
 
 WORKDIR /workspace
-
+COPY pyproject.toml poetry.lock /workspace/
 
 RUN groupadd --gid $USER_GID $USER_NAME && \
     useradd --uid $USER_UID --gid $USER_GID -m $USER_NAME && \
@@ -22,16 +22,19 @@ RUN groupadd --gid $USER_GID $USER_NAME && \
     apt-get -y install --no-install-recommends software-properties-common && \
     add-apt-repository "ppa:deadsnakes/ppa" -y && \
     apt-get -y install --no-install-recommends \
-        curl \
-        git \
-        libgl1-mesa-dev \
-        python3.11 \
-        sudo && \
+    curl \
+    git \
+    libgl1-mesa-dev \
+    python3.11 \
+    sudo && \
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
     python3.11 get-pip.py && \
     rm get-pip.py && \
     ln -s python3.11 python && \
-    mv python /usr/bin/ 
+    mv python /usr/bin/ && \
+    pip install --no-cache-dir poetry && \
+    poetry config virtualenvs.create false && \
+    poetry install
 
 USER $USER_NAME
 
