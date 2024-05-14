@@ -56,7 +56,8 @@
     ```
 
 6. Dev Containersを使用してコンテナ環境に入る（ビルドに20分くらいかかります。）
-    
+
+    - File -> Save Workspace As
     - `Ctrl+Shift+P`=>`Dev Containers: Rebuild Container`
 
 7. Poetryでインストールしたライブラリが使えるか確認（PyTorchでCUDAが使えるか確認）
