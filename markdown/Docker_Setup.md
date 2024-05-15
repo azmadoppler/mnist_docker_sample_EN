@@ -95,7 +95,7 @@
 
     NVIDIA DriverとCUDAのバージョンがコマンドライン上に表示されればテスト完了です。
 
-    <img src="images/nvidia_smi.png" alt="nivida-smi" height="250" />
+    <img src="../images/nvidia_smi.png" alt="nvida-smi" height="250" />
 
 ## 参考文献
 
