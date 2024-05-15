@@ -4,7 +4,7 @@ __pycache__/
 /checkpoints/
 /data/
 .ipynb_checkpoints/
-.code-workspace
+Zone.Identifier
 
 # weight file
 *.pt
