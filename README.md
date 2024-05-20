@@ -62,15 +62,10 @@
     sh .devcontainer/generate_env.sh
     ```
 
-7. VSCodeのワークスペースファイルを開く
+6. Dev Containersを使用してコンテナ環境に入る（ビルドに20分くらいかかります。）
 
-    ```
-    code --reuse-window mnist_docker_sample.code-workspace
-    ```
-
-8. Dev Containersを使用してコンテナ環境に入る（ビルドには約20分かかります。）
-
-    - `Ctrl+Shift+P`を押し、`Dev Containers: Reopen in Container`を選択します。
+    - File -> Save Workspace As
+    - `Ctrl+Shift+P`=>`Dev Containers: Rebuild Container`
 
 9. Poetryでインストールしたライブラリが使えるか確認（PyTorchでCUDAが使えるか確認）
 

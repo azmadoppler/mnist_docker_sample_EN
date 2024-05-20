@@ -55,6 +55,8 @@
     
     ```
     sudo usermod -aG docker ${USER}
+    sudo systemctl restart docker
+    sudo reboot
     ```
 
     コマンド実行後Ubuntuを再起動、もしくは`sudo systemctl restart docker`を実行してください
