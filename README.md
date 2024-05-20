@@ -29,37 +29,50 @@
 
 ## セットアップ手順
 
-0. サーバーにGit, Docker, CUDA, nvidia-container-toolkitをインストール。Dockerとnvidia-container-toolkitのインストール方法については[Dockerのセットアップ方法](/markdown/Docker_Setup.md)を確認してください。
+0. サーバーにGit, Docker, CUDA, nvidia-container-toolkitをインストール
+    - Dockerとnvidia-container-toolkitのインストール方法については[Dockerのセットアップ方法](/markdown/Docker_Setup.md)を確認してください。
 
 1. ローカル上のPCにVSCodeの拡張機能Remote Developmentをインストール
 
-    - Remote DevelopmentはRemote-SSH, WSL, Dev Containersの拡張機能をまとめてインストールしてくれます。Remote-SSHとDev Containersの使い方については[Dev Containersの導入](/markdown/DevContainers.md)を確認してください。
+    - Remote DevelopmentはRemote-SSH, WSL, Dev Containersの拡張機能をまとめてインストールしてくれます。
+    
+    - 拡張機能ビュー (`Ctrl+Shift+X`) で「Remote Development」と検索し、インストールします。
 
 2. Remote-SSHを使ってサーバー上のアカウントにログインする
 
-3. サーバー上の適当なフォルダにclone
+    - Remote-SSHの使い方については、[Remote-SSHの使い方](/markdown/Remote_SSH.md)を確認してください。
+
+3. `Ctrl+J`を押し、VSCode上でターミナルを開く
+
+4. サーバー上の適当なフォルダにclone
 
     ```
     git clone https://github.com/w034ff/mnist_docker_sample.git
     ```
 
-4. 3でcloneしたサーバー上のmnist_docker_sampleフォルダを開く
+5. 4でcloneしたサーバー上のmnist_docker_sampleフォルダに移動
 
     ```
     cd mnist_docker_sample
     ```
 
-5. Dockerコンテナ作成用の`.env`ファイル作成
+6. Dockerコンテナ作成用の`.env`ファイル作成
 
     ```
     sh .devcontainer/generate_env.sh
     ```
 
-6. Dev Containersを使用してコンテナ環境に入る（ビルドに20分くらいかかります。）
-    
-    - `Ctrl+Shift+P`=>`Dev Containers: Rebuild Container`
+7. VSCodeのワークスペースファイルを開く
 
-7. Poetryでインストールしたライブラリが使えるか確認（PyTorchでCUDAが使えるか確認）
+    ```
+    code --reuse-window mnist_docker_sample.code-workspace
+    ```
+
+8. Dev Containersを使用してコンテナ環境に入る（ビルドには約20分かかります。）
+
+    - `Ctrl+Shift+P`を押し、`Dev Containers: Reopen in Container`を選択します。
+
+9. Poetryでインストールしたライブラリが使えるか確認（PyTorchでCUDAが使えるか確認）
 
     - Jupyter Labを起動し、`MNIST_pytorch.ipynb`を開く
 

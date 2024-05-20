@@ -1,10 +1,10 @@
 # Byte-compiled / optimized / DLL files
-.env
+/.env
 __pycache__/
 /checkpoints/
 /data/
 .ipynb_checkpoints/
-.code-workspace
+Zone.Identifier
 
 # weight file
 *.pt
