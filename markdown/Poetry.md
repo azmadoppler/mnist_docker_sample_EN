@@ -25,8 +25,12 @@
 以下のコマンドでPythonパッケージを削除できます。
 
   ```
-  poetry add <削除したいパッケージ名>
+  poetry remove <削除したいパッケージ名>
   ```
+
+## Poetryの仮想環境
+
+Poetry add コマンドはPoetryの.lockファイルに必要なパッケージを入れだけ、Dockerリビルドまたは poetry shell を仮想環境を実行しないといけない。
 
 ## Dockerコンテナ内でのパッケージの追加・削除について
 
