@@ -8,6 +8,8 @@
 
 - Docker, SSH, Dev Containerについて勉強しておくと個別で環境構築する際に役立ちます。
 
+- PyTorchではなく、TensorflowGPUの場合はtensorflowのフォルダーにあるファイルはRootフォルダーに上書き移動してください。
+
 ## 参考資料について
 
 初めて深層学習を実行する方は以下の資料が参考になると思いますので、ぜひ活用してください。
@@ -25,7 +27,7 @@
 - Ubuntu 22.04
 - Git 2.34.1
 - Docker 26.0.1
-- CUDA Drive (nvidia driver) 537.42
+- CUDA Drive (nvidia driver) >480
 
 ## セットアップ手順
 

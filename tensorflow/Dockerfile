@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.2.2-devel-ubuntu20.04
+FROM tensorflow/tensorflow:latest-gpu
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/home/$USER/.local/bin:${PATH}"
@@ -20,7 +20,7 @@ RUN groupadd --gid $USER_GID $USER_NAME && \
     apt-get -y install --no-install-recommends locales && \
     localedef -f UTF-8 -i ja_JP ja_JP.UTF-8 && \
     apt-get -y install --no-install-recommends software-properties-common && \
-    add-apt-repository "ppa:deadsnakes/ppa" -y && \
+    # add-apt-repository "ppa:deadsnakes/ppa" -y && \
     apt-get -y install --no-install-recommends \
     curl \
     git \

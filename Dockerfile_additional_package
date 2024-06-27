@@ -22,9 +22,32 @@ RUN groupadd --gid $USER_GID $USER_NAME && \
     apt-get -y install --no-install-recommends software-properties-common && \
     add-apt-repository "ppa:deadsnakes/ppa" -y && \
     apt-get -y install --no-install-recommends \
+    build-essential \
+    autoconf \
+    automake \
+    libtool \
+    pkg-config \
+    ca-certificates \
+    wget \
     curl \
     git \
     libgl1-mesa-dev \
+    libjpeg-dev \
+    libpng-dev \
+    language-pack-en \
+    locales \
+    locales-all \
+    libprotobuf-dev \
+    protobuf-compiler \
+    zlib1g-dev \
+    swig \
+    vim \
+    gdb \
+    valgrind \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    cmake && \
     python3.11 \
     sudo && \
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
