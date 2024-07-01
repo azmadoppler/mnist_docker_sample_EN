@@ -1,28 +1,31 @@
-# DockerとPoetry, Pytorchを用いてMNISTを実行する方法
+# WHow to run MNIST with Docker, Poetry and Pytorch.
 
-## はじめに
+## Introduction.
 
-- 2024年4月時点のDockerとPoetryを用いたPyTorch環境でMNISTを実行するサンプルです。
+- This is a sample of running MNIST in a PyTorch environment using Docker and Poetry as of April 2024.
 
-- PyTorch以外に深層学習でよく使うライブラリのインストールとLinter, Formatterの設定をします。
+- In addition to PyTorch, you will install libraries commonly used in deep learning such as Python Package and Formatter.
 
-- Docker, SSH, Dev Containerについて勉強しておくと個別で環境構築する際に役立ちます。
+- Learning about Docker, SSH and Dev Container will be useful when building individual environments. (However, this tutorial won't go into in depth)
 
-- PyTorchではなく、TensorflowGPUの場合はtensorflowのフォルダーにあるファイルはRootフォルダーに上書き移動してください。
+- If you are using TensorflowGPU instead of PyTorch, overwrite any files in the tensorflow folder and move them to the Root/Base folder.
 
-## 参考資料について
+rch, overwrite any files in the tensorflow folder and move them to the Root/Base folder.
 
-初めて深層学習を実行する方は以下の資料が参考になると思いますので、ぜひ活用してください。
+## About the reference material (Japanese)
 
-- [20220621_勉強会_深層学習入門.ipynb](/20220621_勉強会_深層学習入門.ipynb)（この資料はTensorFlowを用いたコードとなっているため、Google Colaboratoryで実行してください。）
+If you are running deep learning for the first time, please use the following documents as a reference. 
 
-- [研究で参考になるかもしれないリポジトリ](https://github.com/orgs/bisbislab/repositories)（先人達が作成したリポジトリです。参考になるコードがあるかも？）
+- [20220621_勉強会_深層学習入門.ipynb](/20220621_勉強会_深層学習入門.ipynb)（This document is code using TensorFlow, so please run it on Google Colaboratory.）
 
-- [Poetryの使い方](/markdown/Poetry.md)
+- [Repositories that may be helpful in your research(Japanese)](https://github.com/orgs/bisbislab/repositories) (These are repositories created by previously lab student. Might have code that could be helpful?)
 
-## 動作環境
+- [How to use Poetry](/markdown/Poetry.md)
 
-以下の環境で動作済み
+
+## Operating environment
+
+The following environments have been tested
 
 - Ubuntu 22.04
 - Git 2.34.1
